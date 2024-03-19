@@ -34,6 +34,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.awt.*;
+import java.util.Objects;
 
 /**
  * ...
@@ -80,6 +81,8 @@ public class RoboRally extends Application
         vbox.setMinWidth(MIN_APP_WIDTH);
         vbox.setMinHeight(MIN_APP_HEIGHT);
         Scene primaryScene = new Scene(vbox);
+        vbox.getStylesheets().add("VBox");
+        primaryScene.getStylesheets().add((Thread.currentThread().getContextClassLoader().getResource("/styles.css")).toExternalForm());
         //
         // CREATE Main Menu
         //
